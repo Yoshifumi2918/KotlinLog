@@ -4,9 +4,13 @@ import android.util.Log
 
 open class Human: Animal, Thinkable {
 
+    var hobby: String
 
     //superで親クラスのコンストラクタを呼ぶ
-    constructor(name: String, age: String, hobby: String): super(name, age,hobby) {
+    constructor(name: String, age: String, hobby: String): super(name, age) {
+
+        this.hobby = hobby
+
     }
 
     //Animalクラスのメソッドをオーバーライド
