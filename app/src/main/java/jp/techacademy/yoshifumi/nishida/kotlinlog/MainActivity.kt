@@ -13,21 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val dog = Dog("ポチ", 3)      // 名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
-        dog.say()  // ポチが吠えます（ログ出力）
-        Log.d("kotlintest", "犬の名前は" + dog.name + "です。")
-        Log.d("kotlintest", "犬の年齢は" + dog.age + "歳です。")
+        val dog = Dog("ポチ", "3", "")      // 名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
-        val bigdog = BigDog("ヨーゼフ", 15   // 名前をヨーゼフ、年齢15歳で、BigDogインスタンスを作る
-
-                 bigdog.say()
-
-                Log.d("kotlintest", "犬の名前は" + bigdog.name + "です。")
-        Log.d("kotlintest", "犬の年齢は" + bigdog.age + "歳です。")
+        dog.move()
 
 
-        Log.d("kotlintest", "ログへの出力テスト")    // ここを追加
+        //課題
+
+        val human = Human("〜〜","〜〜","〜〜")
+
+        human.say()
+
+        human.think()
 
         var num = 10
 

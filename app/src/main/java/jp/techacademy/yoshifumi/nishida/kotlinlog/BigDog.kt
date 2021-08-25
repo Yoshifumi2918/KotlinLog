@@ -7,7 +7,7 @@ import jp.techacademy.yoshifumi.nishida.kotlinlogDog.Dog
 class BigDog: Dog{
 
     //superで親クラスのコンストラクタを呼ぶ
-    constructor(name: String, age: Int): super(name,age) {}
+    constructor(name: String, age: String, hobby: String): super(name,age,hobby) {}
 
         override fun say() {
 

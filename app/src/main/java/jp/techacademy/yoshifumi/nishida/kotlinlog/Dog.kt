@@ -1,28 +1,23 @@
 package jp.techacademy.yoshifumi.nishida.kotlinlogDog
 
 import android.util.Log
+import jp.techacademy.yoshifumi.nishida.kotlinlog.Animal
+import jp.techacademy.yoshifumi.nishida.kotlinlog.Movable
 
- open class Dog {
-    //プロパティ
-    var name: String
-    var age: Int
 
-    //引数付きコントラクタ
-    constructor(name: String, age: Int ) {
-
-        this.name = name
-        this.age = age
-
+open class Dog: Animal, Movable {
+    // 引数付きコンストラクタ
+    constructor(name: String, age: String, hobby: String): super(name, age, hobby) {
     }
 
-
-    //メソッド
-    open fun say() {
-        Log.d ("kotlintest", this.name + "(" + this.age + "歳）" + "[ワンワン]")
-
+    // Animalクラスのメソッドをオーバーライド
+    override fun say() {
+        Log.d("kotlintest", this.name + "(" + this.age + "歳)" + "「ワンワン」")
     }
 
-
-
-
+    // Movableインターフェイスのメソッドをオーバーライド
+    override fun move() {
+        Log.d("kotlintest", this.name + "(" + this.age + "歳)" + "は全力で走った。")
     }
+}
+
